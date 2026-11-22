@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Membuat tampilan responsif untuk HP dan komputer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul halaman -->
+    <title>Pembayaran - PharmaClean</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="payment-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🍋 PharmaClean
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+
+    </header>
+
+
+    <!-- KONTEN PEMBAYARAN -->
+    <main class="payment-main">
+
+        <!-- HEADER HALAMAN -->
+        <section class="payment-header">
+
+            <span class="payment-label">
+                ✦ PAYMENT CENTER
+            </span>
+
+            <h1>
+                Selesaikan<br>
+                <span>Pesananmu!</span>
+            </h1>
+
+            <p>
+                Sedikit lagi pesanan PharmaClean kamu selesai.
+                Periksa detail pesanan dan informasi pembayaran
+                di bawah ini.
+            </p>
+
+        </section>
+
+
+        <!-- INDIKATOR PROSES -->
+        <section class="payment-steps">
+
+            <div class="step completed">
+                <span>✓</span>
+                <p>Pemesanan</p>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step active">
+                <span>2</span>
+                <p>Pembayaran</p>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step">
+                <span>3</span>
+                <p>Konfirmasi</p>
+            </div>
+
+        </section>
+
+
+        <!-- LAYOUT PEMBAYARAN -->
+        <section class="payment-layout">
+
+
+            <!-- KOLOM KIRI -->
+            <div class="payment-left">
+
+
+                <!-- RINGKASAN PESANAN -->
+                <div class="payment-box">
+
+                    <div class="payment-box-heading">
+
+                        <div>
+                            <span class="small-label">YOUR ORDER</span>
+                            <h2>Ringkasan Pesanan</h2>
+                        </div>
+
+                        <span class="order-icon">🛍️</span>
+
+                    </div>
+
+
+                    <!-- PRODUK -->
+                    <div class="payment-product">
+
+                        <img
+                            src="images/product.jpg"
+                            alt="PharmaClean Dishwashing Liquid">
+
+                        <div class="payment-product-info">
+
+                            <h3>
+                                PharmaClean Dishwashing Liquid
+                            </h3>
+
+                            <p>Dishwashing Liquid</p>
+
+                            <strong>Rp15.000 / produk</strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DETAIL PEMESAN -->
+                    <div class="payment-details">
+
+                        <div class="detail-item">
+                            <span>Nama Pemesan</span>
+                            <strong id="namaPembeli">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Nomor WhatsApp</span>
+                            <strong id="nomorPembeli">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Jumlah Produk</span>
+                            <strong id="jumlahProduk">-</strong>
+                        </div>
+
+                        <div class="detail-item address-item">
+                            <span>Alamat Pengiriman</span>
+                            <strong id="alamatPembeli">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INFORMASI PEMBAYARAN -->
+                <div class="payment-box">
+
+                    <div class="payment-box-heading">
+
+                        <div>
+                            <span class="small-label">PAYMENT METHOD</span>
+                            <h2>Informasi Pembayaran</h2>
+                        </div>
+
+                        <span class="order-icon">💳</span>
+
+                    </div>
+
+
+                    <p class="payment-description">
+                        Gunakan informasi rekening resmi dari
+                        penjual untuk menyelesaikan pembayaran.
+                    </p>
+
+
+                    <!-- KARTU REKENING -->
+                    <div class="bank-card">
+
+                        <div class="bank-card-top">
+
+                            <span>PHARMACLEAN PAYMENT</span>
+
+                            <span>🍋</span>
+
+                        </div>
+
+                        <div class="bank-card-content">
+
+                            <p>METODE PEMBAYARAN</p>
+                            <h3>Belum ditentukan</h3>
+
+                            <p>ATAS NAMA</p>
+                            <h3>Akan diinformasikan</h3>
+
+                            <p>NOMOR REKENING / E-WALLET</p>
+                            <h3>Menunggu informasi guru</h3>
+
+                        </div>
+
+                        <div class="bank-card-bottom">
+                            Secure Payment Information
+                        </div>
+
+                    </div>
+
+
+                    <!-- CATATAN -->
+                    <div class="payment-note">
+
+                        <span>💡</span>
+
+                        <p>
+                            Informasi rekening akan diperbarui
+                            setelah mendapatkan data resmi dari
+                            penjual. Jangan melakukan transfer
+                            sebelum informasi diberikan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KOLOM KANAN -->
+            <aside class="payment-right">
+
+                <div class="checkout-card">
+
+                    <span class="small-label">
+                        PAYMENT SUMMARY
+                    </span>
+
+                    <h2>Total Pembayaran</h2>
+
+                    <div class="checkout-price">
+
+                        <span id="totalPembayaran">
+                            Rp15.000
+                        </span>
+
+                    </div>
+
+
+                    <div class="checkout-divider"></div>
+
+
+                    <div class="checkout-row">
+
+                        <span>Harga Produk</span>
+
+                        <strong id="hargaRingkasan">
+                            Rp15.000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-row">
+
+                        <span>Jumlah Produk</span>
+
+                        <strong id="jumlahRingkasan">
+                            1 produk
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-divider"></div>
+
+
+                    <div class="checkout-total">
+
+                        <span>Total</span>
+
+                        <strong id="totalRingkasan">
+                            Rp15.000
+                        </strong>
+
+                    </div>
+
+
+                    <!-- TOMBOL WHATSAPP -->
+                    <a
+                        href="https://wa.me/6281226647756"
+                        class="payment-whatsapp"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span>☏</span>
+                        Hubungi Penjual
+
+                    </a>
+
+
+                    <p class="checkout-caption">
+                        Hubungi penjual untuk mendapatkan
+                        informasi pembayaran dan konfirmasi pesanan.
+                    </p>
+
+                </div>
+
+
+                <!-- INFORMASI KEAMANAN -->
+                <div class="secure-card">
+
+                    <span>🔒</span>
+
+                    <div>
+                        <h3>Pembayaran Aman</h3>
+
+                        <p>
+                            Pastikan pembayaran dilakukan
+                            melalui informasi resmi dari penjual.
+                        </p>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>🍋 PharmaClean</h3>
+
+        <p>Clean Dishes, Happy Life!</p>
+
+        <p>&copy; 2026 PharmaClean</p>
+
+    </footer>
+
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

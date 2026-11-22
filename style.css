@@ -1,0 +1,1490 @@
+
+/* =====================================================
+   PHARMACLEAN
+   Tema: Fresh Lemon
+   Warna utama: Hijau, Putih, dan Kuning Lemon
+===================================================== */
+
+
+/* =====================================================
+   1. RESET DAN PENGATURAN DASAR
+===================================================== */
+
+/* Menghilangkan jarak bawaan browser dan menyamakan
+   perhitungan ukuran seluruh elemen. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Membuat perpindahan halaman terasa lebih halus. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pengaturan dasar untuk seluruh halaman website. */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #ffffff;
+    color: #253d2e;
+    line-height: 1.7;
+}
+
+/* Variabel warna agar mudah digunakan dan diubah. */
+:root {
+    --green: #267747;
+    --dark-green: #174e30;
+    --light-green: #edf6ed;
+    --lemon: #e6ed9c;
+    --text: #253d2e;
+    --muted: #78867b;
+    --border: #e7eee7;
+    --white: #ffffff;
+}
+
+
+/* =====================================================
+   2. NAVBAR / MENU NAVIGASI
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Tulisan logo PharmaClean. */
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--green);
+    letter-spacing: -0.8px;
+}
+
+/* Mengatur posisi menu navigasi. */
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Tampilan tulisan menu. */
+.navbar nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Efek ketika menu disentuh atau diarahkan kursor. */
+.navbar nav a:hover {
+    color: var(--green);
+}
+
+/* Menandai halaman yang sedang dibuka. */
+.navbar nav a.active {
+    color: var(--green);
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   3. HERO SECTION / HALAMAN HOME
+===================================================== */
+
+.hero {
+    min-height: 570px;
+    padding: 75px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background: #f5f9f2;
+}
+
+/* Bagian tulisan pada hero. */
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+/* Tulisan kecil di atas judul. */
+.subtitle {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* Judul utama halaman Home. */
+.hero-content h1 {
+    color: var(--dark-green);
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+/* Deskripsi pada hero. */
+.hero-content p:not(.subtitle) {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 430px;
+}
+
+/* Bagian foto produk pada hero. */
+.hero-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+/* Mengatur foto agar tidak terpotong. */
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   4. TOMBOL WEBSITE
+===================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 30px;
+
+    background: var(--green);
+    color: var(--white);
+
+    border: none;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efek hover pada tombol. */
+.btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   5. HALAMAN PRODUK
+===================================================== */
+
+.produk {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.produk .subtitle {
+    margin-bottom: 8px;
+}
+
+.produk h2 {
+    font-size: 36px;
+    color: var(--dark-green);
+    margin-bottom: 45px;
+    letter-spacing: -1px;
+}
+
+/* Kartu yang menampilkan produk. */
+.product-card {
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
+    padding: 25px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: 0 12px 35px rgba(32, 77, 45, 0.07);
+    transition: 0.3s;
+}
+
+/* Efek ketika kartu produk diarahkan kursor. */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(32, 77, 45, 0.12);
+}
+
+/* Foto produk. */
+.product-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Nama produk. */
+.product-card h3 {
+    font-size: 18px;
+    color: var(--dark-green);
+    margin: 18px 0 8px;
+}
+
+/* Harga produk. */
+.price {
+    color: var(--green);
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Deskripsi produk. */
+.product-card p:not(.price) {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   6. HALAMAN TENTANG
+===================================================== */
+
+.tentang {
+    padding: 75px 10%;
+    text-align: center;
+    background: var(--light-green);
+}
+
+.tentang h2 {
+    font-size: 30px;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.tentang p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   7. FOOTER / BAGIAN BAWAH WEBSITE
+===================================================== */
+
+footer {
+    background: var(--dark-green);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #d9e9dc;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   8. HALAMAN PEMESANAN
+===================================================== */
+
+/* Latar belakang halaman pemesanan. */
+.order-section {
+    min-height: 100vh;
+    padding: 65px 8%;
+    background: #f5f9f2;
+}
+
+/* Judul halaman pemesanan. */
+.order-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.order-heading h1 {
+    color: var(--dark-green);
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.order-heading p:not(.subtitle) {
+    color: var(--muted);
+}
+
+/* Membagi halaman menjadi bagian produk dan formulir. */
+.order-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr;
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* Kartu produk dan formulir pemesanan. */
+.order-product,
+.order-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(32, 77, 45, 0.06);
+}
+
+/* Bagian informasi produk. */
+.order-product {
+    text-align: center;
+}
+
+.order-product img {
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+}
+
+.order-product h2 {
+    font-size: 19px;
+    color: var(--dark-green);
+    margin-top: 15px;
+}
+
+/* Judul formulir. */
+.order-form h2 {
+    color: var(--dark-green);
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+/* Label setiap kolom formulir. */
+.order-form label {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 17px 0 7px;
+}
+
+/* Kolom input dan textarea. */
+.order-form input,
+.order-form textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+
+    background: #fbfdfb;
+    border: 1px solid #dce7dc;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efek ketika kolom formulir dipilih. */
+.order-form input:focus,
+.order-form textarea:focus {
+    border-color: var(--green);
+    background: var(--white);
+}
+
+/* Mengizinkan tinggi textarea diubah pengguna. */
+.order-form textarea {
+    resize: vertical;
+}
+
+/* Kotak total harga pesanan. */
+.total-box {
+    margin: 25px 0;
+    padding: 20px;
+    background: var(--light-green);
+    border-radius: 10px;
+}
+
+.total-box p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.total-box h2 {
+    color: var(--green);
+    font-size: 27px;
+    margin-top: 5px;
+}
+
+/* Tombol kirim pesanan memenuhi lebar formulir. */
+.order-btn {
+    width: 100%;
+    font-family: inherit;
+}
+
+/* Link kembali ke halaman sebelumnya. */
+.back-link {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   9. HALAMAN PEMBAYARAN - TAMPILAN UTAMA
+===================================================== */
+
+/* Latar belakang halaman pembayaran. */
+.payment-page {
+    background: #f5f9f2;
+}
+
+/* Bagian utama halaman pembayaran. */
+.payment-main {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 55px 6% 75px;
+}
+
+/* Bagian judul halaman pembayaran. */
+.payment-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.payment-label {
+    display: inline-block;
+    padding: 7px 16px;
+    margin-bottom: 12px;
+
+    background: #f0f4c9;
+    color: var(--dark-green);
+
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.payment-header h1 {
+    color: var(--dark-green);
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.payment-header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =====================================================
+   10. LANGKAH PEMBAYARAN
+===================================================== */
+
+.payment-steps {
+    max-width: 570px;
+    margin: 0 auto 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Setiap langkah pembayaran. */
+.step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Lingkaran nomor langkah. */
+.step span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7ece7;
+    color: var(--muted);
+
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/* Langkah yang sedang aktif. */
+.step.active {
+    color: var(--green);
+}
+
+.step.active span {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* Garis pemisah antarlangkah. */
+.step-line {
+    width: 55px;
+    height: 2px;
+    background: #dce6dc;
+}
+
+
+/* =====================================================
+   11. SUSUNAN KONTEN PEMBAYARAN
+===================================================== */
+
+/* Membuat dua kolom: informasi dan ringkasan. */
+.payment-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Kolom kiri dan kanan. */
+.payment-left,
+.payment-right {
+    min-width: 0;
+}
+
+/* Mengatur jarak antar kartu di kolom kiri. */
+.payment-left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Kartu informasi pembayaran. */
+.payment-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 27px;
+
+    box-shadow: 0 10px 30px rgba(32, 77, 45, 0.05);
+}
+
+/* Bagian judul setiap kartu. */
+.payment-box-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.payment-box-heading h2 {
+    color: var(--dark-green);
+    font-size: 19px;
+}
+
+/* Ikon kecil pada judul kartu. */
+.order-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-green);
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+/* Tulisan kecil penjelas informasi. */
+.small-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   12. INFORMASI PRODUK PADA PEMBAYARAN
+===================================================== */
+
+.payment-product {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 17px;
+    background: #f8fbf7;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.payment-product-info {
+    min-width: 0;
+}
+
+.payment-product-info h3 {
+    color: var(--dark-green);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.payment-product-info p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   13. RINCIAN DATA PEMESAN
+===================================================== */
+
+.payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Setiap baris informasi pemesan. */
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+/* Nama keterangan dan isi data. */
+.detail-item span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.detail-item strong {
+    color: var(--text);
+    font-size: 13px;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* Baris alamat dibuat bertumpuk. */
+.address-item {
+    display: block;
+}
+
+.address-item strong {
+    display: block;
+    text-align: left;
+    margin-top: 6px;
+}
+
+
+/* =====================================================
+   14. INFORMASI REKENING / METODE PEMBAYARAN
+===================================================== */
+
+.payment-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+/* Kartu informasi rekening. */
+.bank-card {
+    padding: 22px;
+    background: linear-gradient(135deg, #1d6139, #2d8a50);
+    color: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Bagian atas kartu rekening. */
+.bank-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.bank-card-top p {
+    font-size: 12px;
+    color: #e1f0e4;
+}
+
+/* Bagian isi kartu rekening. */
+.bank-card-content {
+    margin-bottom: 25px;
+}
+
+.bank-card-content p {
+    color: #e1f0e4;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.bank-card-content h3 {
+    font-size: 21px;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+}
+
+/* Bagian bawah kartu rekening. */
+.bank-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.bank-card-bottom p {
+    color: #e1f0e4;
+    font-size: 11px;
+}
+
+.bank-card-bottom strong {
+    display: block;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Catatan pembayaran berwarna kuning lembut. */
+.payment-note {
+    margin-top: 18px;
+    padding: 15px;
+
+    background: #fff9e8;
+    border: 1px solid #f3e9c8;
+    border-radius: 10px;
+
+    color: #806a31;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   15. RINGKASAN TOTAL PEMBAYARAN
+===================================================== */
+
+/* Kartu ringkasan di kolom kanan. */
+.checkout-card {
+    position: sticky;
+    top: 100px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 27px;
+
+    box-shadow: 0 10px 30px rgba(32, 77, 45, 0.07);
+}
+
+.checkout-card h2 {
+    color: var(--dark-green);
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+/* Bagian harga utama. */
+.checkout-price {
+    padding: 18px;
+    background: var(--light-green);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.checkout-price p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.checkout-price h3 {
+    color: var(--green);
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+/* Garis pemisah ringkasan. */
+.checkout-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 18px 0;
+}
+
+/* Baris rincian harga. */
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 13px 0;
+}
+
+.checkout-row span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.checkout-row strong {
+    color: var(--text);
+    font-size: 13px;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* Bagian total akhir. */
+.checkout-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.checkout-total span {
+    color: var(--dark-green);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.checkout-total strong {
+    color: var(--green);
+    font-size: 22px;
+    text-align: right;
+}
+
+/* Tombol menuju WhatsApp. */
+.payment-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px 18px;
+
+    background: var(--green);
+    color: var(--white);
+
+    border-radius: 9px;
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.payment-whatsapp:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+/* Tulisan kecil di bawah tombol. */
+.checkout-caption {
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 13px;
+}
+
+/* Kartu catatan keamanan. */
+.secure-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-top: 18px;
+    padding: 17px;
+
+    background: #f0f7ef;
+    border: 1px solid #e1eee0;
+    border-radius: 12px;
+}
+
+.secure-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.secure-card strong {
+    display: block;
+    color: var(--dark-green);
+    margin-bottom: 3px;
+}
+
+
+/* =====================================================
+   16. RESPONSIVE TABLET
+   Bagian ini aktif pada layar maksimal 900px.
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+    /* Mengubah dua kolom pembayaran menjadi satu kolom. */
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ringkasan tidak lagi menempel saat halaman digulir. */
+    .checkout-card {
+        position: static;
+    }
+
+}
+
+
+/* =====================================================
+   17. RESPONSIVE TABLET DAN HP
+   Bagian ini aktif pada layar maksimal 768px.
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar lebih rapat pada tablet dan HP. */
+    .navbar {
+        min-height: 65px;
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar nav {
+        gap: 16px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    /* Hero berubah menjadi susunan vertikal. */
+    .hero {
+        min-height: auto;
+        padding: 55px 7% 45px;
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .hero-content p:not(.subtitle) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        max-width: 400px;
+        max-height: 320px;
+    }
+
+    /* Mengatur halaman produk. */
+    .produk {
+        padding: 65px 6%;
+    }
+
+    .produk h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .product-card {
+        max-width: 390px;
+    }
+
+    /* Mengatur halaman tentang. */
+    .tentang {
+        padding: 55px 7%;
+    }
+
+    /* Mengatur halaman pemesanan. */
+    .order-section {
+        padding: 45px 5%;
+    }
+
+    .order-heading h1 {
+        font-size: 29px;
+    }
+
+    .order-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .order-product,
+    .order-form {
+        padding: 23px;
+    }
+
+    .order-product img {
+        height: 240px;
+    }
+
+    /* Mengatur halaman pembayaran. */
+    .payment-main {
+        padding: 40px 5% 55px;
+    }
+
+    .payment-box,
+    .checkout-card {
+        padding: 23px;
+    }
+
+    .payment-header h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =====================================================
+   18. RESPONSIVE HP
+   Bagian ini aktif pada layar maksimal 520px.
+===================================================== */
+
+@media screen and (max-width: 520px) {
+
+    /* Navbar dapat menyesuaikan lebar layar HP. */
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .navbar nav {
+        gap: 13px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    /* Hero pada HP. */
+    .hero {
+        padding: 45px 6%;
+        gap: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+        letter-spacing: -1px;
+    }
+
+    .hero-content p:not(.subtitle) {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        max-height: 270px;
+    }
+
+    /* Produk pada HP. */
+    .produk h2 {
+        font-size: 27px;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+
+    /* Tentang pada HP. */
+    .tentang h2 {
+        font-size: 25px;
+    }
+
+    .tentang p {
+        font-size: 14px;
+    }
+
+    /* Pemesanan pada HP. */
+    .order-heading h1 {
+        font-size: 27px;
+    }
+
+    .order-product,
+    .order-form {
+        padding: 20px;
+    }
+
+    .order-form h2 {
+        font-size: 20px;
+    }
+
+    /* Pembayaran pada HP. */
+    .payment-main {
+        padding: 32px 5% 45px;
+    }
+
+    .payment-header {
+        margin-bottom: 25px;
+    }
+
+    .payment-header h1 {
+        font-size: 27px;
+    }
+
+    .payment-header p {
+        font-size: 13px;
+    }
+
+    .payment-steps {
+        gap: 7px;
+        margin-bottom: 28px;
+    }
+
+    .step {
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .step span {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    .step-line {
+        width: 25px;
+    }
+
+    .payment-box,
+    .checkout-card {
+        padding: 19px;
+        border-radius: 13px;
+    }
+
+    .payment-box-heading h2 {
+        font-size: 17px;
+    }
+
+    .payment-product {
+        padding: 13px;
+    }
+
+    .detail-item {
+        gap: 12px;
+    }
+
+    .detail-item span,
+    .detail-item strong {
+        font-size: 12px;
+    }
+
+    .bank-card {
+        padding: 18px;
+    }
+
+    .bank-card-content h3 {
+        font-size: 18px;
+    }
+
+    .checkout-price h3 {
+        font-size: 25px;
+    }
+
+    .checkout-total strong {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =====================================================
+   19. RESPONSIVE HP KECIL
+   Bagian ini aktif pada layar maksimal 380px.
+===================================================== */
+
+@media screen and (max-width: 380px) {
+
+    /* Navbar pada HP berukuran kecil. */
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 4%;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        padding: 38px 6%;
+    }
+
+    .hero-image img {
+        max-height: 230px;
+    }
+
+    .order-heading h1 {
+        font-size: 24px;
+    }
+
+    /* Langkah pembayaran dibuat lebih ringkas. */
+    .payment-steps {
+        gap: 5px;
+    }
+
+    .step {
+        font-size: 9px;
+    }
+
+    .step span {
+        width: 23px;
+        height: 23px;
+        font-size: 10px;
+    }
+
+    .step-line {
+        width: 16px;
+    }
+
+    .payment-box,
+    .checkout-card {
+        padding: 16px;
+    }
+
+    .bank-card-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* =========================================
+   GALERI GAMBAR PRODUK PHARMACLEAN
+========================================= */
+
+.product-gallery {
+    width: 90%;
+    max-width: 1150px;
+    margin: 70px auto;
+}
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-heading span {
+    color: #719b36;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.gallery-heading h2 {
+    color: #174e30;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.gallery-heading p {
+    color: #78867b;
+    font-size: 14px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+    background: #edf6ed;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+/* Tampilan tablet dan HP */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .gallery-heading h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================
+   GALERI FOTO PRODUK PHARMACLEAN
+========================================= */
+
+.product-gallery {
+    width: 90%;
+    max-width: 1100px;
+    margin: 70px auto 30px;
+}
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-heading h2 {
+    color: #174e30;
+    margin: 12px 0;
+}
+
+.gallery-heading p {
+    color: #78867b;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    padding: 18px;
+    text-align: center;
+}
+
+.gallery-caption h3 {
+    color: #267747;
+    margin-bottom: 8px;
+}
+
+.gallery-caption p {
+    color: #78867b;
+    font-size: 14px;
+}
+
+/* Tampilan untuk HP */
+@media screen and (max-width: 600px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .product-gallery {
+        width: 92%;
+        margin-top: 45px;
+    }
+
+}
+
+
+}

@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Menyesuaikan tampilan dengan layar HP dan komputer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul halaman -->
+    <title>Pemesanan - PharmaClean</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🍋 PharmaClean
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+
+    </header>
+
+
+    <!-- BAGIAN FORM PEMESANAN -->
+    <main>
+
+        <section class="order-section">
+
+            <div class="order-heading">
+
+                <p class="subtitle">ORDER NOW</p>
+
+                <h1>Form Pemesanan</h1>
+
+                <p>
+                    Silakan isi data berikut untuk melakukan
+                    pemesanan PharmaClean.
+                </p>
+
+            </div>
+
+
+            <div class="order-container">
+
+                <!-- INFORMASI PRODUK -->
+                <div class="order-product">
+
+                    <img
+                        src="images/product.jpg"
+                        alt="PharmaClean Dishwashing Liquid">
+
+                    <h3>PharmaClean Dishwashing Liquid</h3>
+
+                    <p class="price">Rp15.000</p>
+
+                    <p>Harga per produk</p>
+
+                </div>
+
+
+                <!-- FORM DATA PEMESAN -->
+                <form class="order-form" id="orderForm">
+
+                    <!-- Input nama -->
+                    <label for="nama">Nama Lengkap</label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required>
+
+
+                    <!-- Input nomor WhatsApp -->
+                    <label for="whatsapp">Nomor WhatsApp</label>
+
+                    <input
+                        type="tel"
+                        id="whatsapp"
+                        placeholder="Contoh: 081234567890"
+                        required>
+
+
+                    <!-- Input alamat -->
+                    <label for="alamat">Alamat Lengkap</label>
+
+                    <textarea
+                        id="alamat"
+                        rows="4"
+                        placeholder="Masukkan alamat pengiriman"
+                        required></textarea>
+
+
+                    <!-- Input jumlah produk -->
+                    <label for="jumlah">Jumlah Produk</label>
+
+                    <input
+                        type="number"
+                        id="jumlah"
+                        min="1"
+                        value="1"
+                        required>
+
+
+                    <!-- Tampilan total harga -->
+                    <div class="total-box">
+
+                        <p>Total Pembayaran</p>
+
+                        <h2 id="totalHarga">Rp15.000</h2>
+
+                    </div>
+
+
+                    <!-- Tombol mengirim pesanan -->
+                    <button type="submit" class="btn">
+                        Lanjut ke Pembayaran →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>🍋 PharmaClean</h3>
+
+        <p>Clean Dishes, Happy Life!</p>
+
+        <p>&copy; 2026 PharmaClean</p>
+
+    </footer>
+
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
